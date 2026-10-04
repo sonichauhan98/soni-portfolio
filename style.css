@@ -1,0 +1,699 @@
+/* ==================================================
+   BASIC SETUP
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #070A12;
+    color: #F5F7FF;
+}
+
+
+/* ==================================================
+   STAR BACKGROUND
+   ================================================== */
+body {
+    font-family: Arial, sans-serif;
+    color: #F5F7FF;
+    margin: 0;
+
+    background-color: #070A12;
+
+    background-image:
+        radial-gradient(circle at 5% 10%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 12% 25%, #38BDF8 0 1px, transparent 2px),
+        radial-gradient(circle at 18% 8%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 25% 18%, #7C5CFC 0 1px, transparent 2px),
+        radial-gradient(circle at 32% 35%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 40% 12%, #38BDF8 0 1px, transparent 2px),
+        radial-gradient(circle at 48% 28%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 56% 8%, #7C5CFC 0 1px, transparent 2px),
+        radial-gradient(circle at 64% 20%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 72% 40%, #38BDF8 0 1px, transparent 2px),
+        radial-gradient(circle at 80% 15%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 88% 30%, #7C5CFC 0 1px, transparent 2px),
+        radial-gradient(circle at 96% 10%, white 0 1px, transparent 2px),
+
+        radial-gradient(circle at 8% 55%, #38BDF8 0 1px, transparent 2px),
+        radial-gradient(circle at 16% 75%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 24% 60%, #7C5CFC 0 1px, transparent 2px),
+        radial-gradient(circle at 35% 80%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 45% 55%, #38BDF8 0 1px, transparent 2px),
+        radial-gradient(circle at 55% 75%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 65% 60%, #7C5CFC 0 1px, transparent 2px),
+        radial-gradient(circle at 75% 85%, white 0 1px, transparent 2px),
+        radial-gradient(circle at 85% 65%, #38BDF8 0 1px, transparent 2px),
+        radial-gradient(circle at 95% 80%, white 0 1px, transparent 2px);
+
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle at 15% 20%, white 0 1px, transparent 3px),
+        radial-gradient(circle at 45% 70%, #7C5CFC 0 1px, transparent 3px),
+        radial-gradient(circle at 75% 30%, #38BDF8 0 1px, transparent 3px),
+        radial-gradient(circle at 90% 80%, white 0 1px, transparent 3px);
+
+    pointer-events: none;
+
+    animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+
+/* ==================================================
+   NAVBAR
+   ================================================== */
+
+.navbar {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #F5F7FF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #7C5CFC;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #8B93A7;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #7C5CFC;
+}
+
+
+/* ==================================================
+   HERO SECTION
+   ================================================== */
+
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 8%;
+}
+
+#home p:first-child {
+    color: #7C5CFC;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#home h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #8B93A7;
+    margin-bottom: 20px;
+}
+
+#home p:last-child {
+    max-width: 600px;
+    color: #8B93A7;
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   ABOUT SECTION
+   ================================================== */
+
+#about {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#about p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    color: #8B93A7;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   SKILLS SECTION
+   ================================================== */
+
+#skills {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills li {
+    padding: 12px 22px;
+    background-color: #111827;
+    border: 1px solid #7C5CFC;
+    border-radius: 30px;
+    color: #F5F7FF;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    background-color: #7C5CFC;
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   PROJECTS SECTION
+   ================================================== */
+
+#projects {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.project {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    padding: 30px;
+    background-color: #111827;
+    border: 1px solid #1F2937;
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project h3 {
+    color: #F5F7FF;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: #8B93A7;
+    line-height: 1.7;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: #7C5CFC;
+    box-shadow: 0 10px 30px rgba(124, 92, 252, 0.2);
+}
+
+
+/* ==================================================
+   CONTACT SECTION
+   ================================================== */
+
+#contact {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#contact > p {
+    color: #8B93A7;
+    margin-bottom: 40px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 8px;
+    color: #F5F7FF;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    background-color: #111827;
+    border: 1px solid #1F2937;
+    border-radius: 8px;
+    color: #F5F7FF;
+    font-size: 16px;
+    outline: none;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #7C5CFC;
+}
+
+#contact button {
+    padding: 14px 28px;
+    background-color: #7C5CFC;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(124, 92, 252, 0.3);
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    border-top: 1px solid #1F2937;
+}
+
+footer p {
+    color: #8B93A7;
+    font-size: 14px;
+}
+
+/* ===== HERO SECTION ===== */
+
+#home {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 10%;
+    gap: 80px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-object {
+    flex: 0 0 300px;
+
+    width: 300px;
+    height: 300px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== HERO TEXT ===== */
+
+#home p:first-child {
+    color: #7C5CFC;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#home h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #8B93A7;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:last-child {
+    max-width: 600px;
+    color: #8B93A7;
+    line-height: 1.7;
+}
+
+
+/* ===== FUTURISTIC OBJECT ===== */
+
+.object-core {
+    width: 120px;
+    height: 120px;
+
+    background: linear-gradient(
+        135deg,
+        #38BDF8,
+        #7C5CFC
+    );
+
+    clip-path: polygon(
+        50% 0%,
+        90% 25%,
+        100% 70%,
+        65% 100%,
+        20% 85%,
+        0% 45%,
+        25% 10%
+    );
+
+    box-shadow:
+        0 0 30px #7C5CFC,
+        0 0 70px rgba(56, 189, 248, 0.4);
+
+    animation: objectFloat 4s ease-in-out infinite;
+}
+
+.object-ring {
+    position: absolute;
+
+    width: 220px;
+    height: 80px;
+
+    border: 2px solid #7C5CFC;
+    border-radius: 50%;
+
+    transform: rotateX(65deg) rotateZ(20deg);
+
+    box-shadow: 0 0 15px #7C5CFC;
+
+    animation: ringRotate 6s linear infinite;
+}
+
+
+/* ===== ANIMATION ===== */
+
+@keyframes objectFloat {
+
+    0% {
+        transform: translateY(0) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotateY(20deg);
+    }
+
+    100% {
+        transform: translateY(0) rotateY(0deg);
+    }
+
+}
+
+@keyframes ringRotate {
+
+    from {
+        transform: rotateX(65deg) rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateX(65deg) rotateZ(360deg);
+    }
+
+}
+
+/* ===== SOCIAL LINKS ===== */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #F5F7FF;
+
+    padding: 12px 22px;
+
+    border: 1px solid #7C5CFC;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #7C5CFC;
+    transform: translateY(-3px);
+}
+
+/* ===== PROJECT LINKS ===== */
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #F5F7FF;
+
+    padding: 10px 18px;
+
+    border: 1px solid #7C5CFC;
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    background-color: #7C5CFC;
+    transform: translateY(-3px);
+}
+
+/* ===== ABOUT LAYOUT ===== */
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    margin: 0 0 18px !important;
+}
+
+
+/* ===== LAPTOP ===== */
+
+.about-laptop {
+    flex: 0 0 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.laptop {
+    width: 330px;
+
+    position: relative;
+
+    animation: laptopFloat 5s ease-in-out infinite;
+}
+
+
+/* Laptop screen */
+
+.laptop-screen {
+    height: 210px;
+
+    background: #0D1220;
+
+    border: 2px solid #7C5CFC;
+
+    border-radius: 12px 12px 5px 5px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 0 25px rgba(124, 92, 252, 0.5),
+        0 0 60px rgba(56, 189, 248, 0.15);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Code */
+
+.code {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-family: monospace;
+    font-size: 14px;
+
+    color: #38BDF8;
+
+    opacity: 0.8;
+}
+
+.code span:nth-child(2),
+.code span:nth-child(6) {
+    color: #7C5CFC;
+}
+
+
+/* Laptop base */
+
+.laptop-base {
+    width: 370px;
+    height: 18px;
+
+    background: #1F2937;
+
+    border-radius: 0 0 15px 15px;
+
+    margin-left: -20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Fading glow around laptop */
+
+.about-laptop::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    background: radial-gradient(
+        circle,
+        rgba(124, 92, 252, 0.18),
+        transparent 70%
+    );
+
+    z-index: -1;
+
+    animation: laptopGlow 4s ease-in-out infinite alternate;
+}
+
+
+/* Animations */
+
+@keyframes laptopFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes laptopGlow {
+
+    from {
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+
+}
